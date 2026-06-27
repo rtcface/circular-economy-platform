@@ -1,0 +1,64 @@
+schema: spec-driven
+
+context: |
+  Tech stack: React, TanStack Start, Tailwind CSS v4, Drizzle ORM, PostgreSQL with PostGIS, Lucia Auth.
+  Architecture: Full-stack React with server functions (`createServerFn`), Container-Presentational pattern.
+  Testing: Vitest (Unit and Integration).
+  Style: Tailwind, Prettier/ESLint (assumed setup).
+
+testing:
+  strict_tdd: false
+  capabilities: |
+    ## Testing Capabilities
+    
+    **Strict TDD Mode**: disabled
+    **Detected**: 2026-06-27
+    
+    ### Test Runner
+    
+    - Command: `pnpm exec vitest run`
+    - Framework: Vitest
+    
+    ### Test Layers
+    
+    | Layer       | Available | Tool        |
+    | ----------- | --------- | ----------- |
+    | Unit        | ✅         | Vitest      |
+    | Integration | ✅         | Vitest      |
+    | E2E         | ❌         | -           |
+    
+    ### Coverage
+    
+    - Available: ❌
+    - Command: `-`
+    
+    ### Quality Tools
+    
+    | Tool         | Available | Command        |
+    | ------------ | --------- | -------------- |
+    | Linter       | ❌         | -              |
+    | Type checker | ❌         | -              |
+    | Formatter    | ❌         | -              |
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Include sequence diagrams for complex flows
+    - Document architecture decisions with rationale
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+  apply:
+    - Follow existing code patterns
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: ""
+    coverage_threshold: 0
+  archive:
+    - Warn before merging destructive deltas

@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sumi-ink: #16161D;
+  --color-spring-green: #98BB6C;
+  --color-dragon-blue: #658594;
+  --color-fuji-white: #DCD7BA;
+
+  --blur-glass: 12px;
+  --opacity-glass: 0.7;
+}

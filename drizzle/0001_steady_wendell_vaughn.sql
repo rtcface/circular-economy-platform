@@ -1,0 +1,1 @@
+ALTER TABLE "donations" ADD COLUMN "failure_reason" text;
