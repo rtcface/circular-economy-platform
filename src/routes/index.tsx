@@ -13,9 +13,9 @@ function Index() {
       {/* Hero Section */}
       <section className="text-center space-y-6 max-w-4xl px-4">
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-fuji-white">
-          Reducí el E-Waste. <br />
+          Reduce el E-Waste. <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-spring-green to-dragon-blue">
-            Potenciá la Educación.
+            Potencia la Educación.
           </span>
         </h1>
         <p className="text-lg md:text-xl text-fuji-white/80 max-w-2xl mx-auto">

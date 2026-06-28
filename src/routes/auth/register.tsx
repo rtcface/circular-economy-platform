@@ -53,7 +53,7 @@ function Register() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!location) {
-      setError('Por favor, seleccioná una ubicación en el mapa');
+      setError('Por favor, selecciona una ubicación en el mapa');
       return;
     }
     
@@ -108,7 +108,7 @@ function Register() {
           </select>
         </div>
         <div className="mb-4">
-          <label className="block text-fuji-white mb-2">Ubicación (Seleccioná en el mapa)</label>
+          <label className="block text-fuji-white mb-2">Ubicación (Selecciona en el mapa)</label>
           <MapPicker onLocationSelect={(lat, lng) => setLocation([lat, lng])} />
           {location && (
             <p className="text-sm text-spring-green mt-2 font-mono">
