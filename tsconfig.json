@@ -15,6 +15,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["app", "server"],
+  "include": ["src", "server"],
   "exclude": ["node_modules"]
 }

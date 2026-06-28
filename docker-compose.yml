@@ -13,5 +13,15 @@ services:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
 
+  web:
+    build: .
+    ports:
+      - "4000:3000"
+    environment:
+      - DATABASE_URL=postgres://postgres:password@db:5432/circular_economy
+    depends_on:
+      - db
+    restart: unless-stopped
+
 volumes:
   postgres_data:

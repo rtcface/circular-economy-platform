@@ -1,11 +1,11 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
 import { useState } from 'react';
-import { createServerFn } from '@tanstack/start';
+import { createServerFn } from '@tanstack/react-start';
 import { db } from '../../db';
 import { users } from '../../db/schema';
 import { eq } from 'drizzle-orm';
 import { lucia } from '../../lib/auth';
-import { setCookie } from 'vinxi/http';
+import { setCookie } from '@tanstack/react-start/server';
 import { Scrypt } from 'oslo/password';
 
 const loginUser = createServerFn({ method: "POST" })

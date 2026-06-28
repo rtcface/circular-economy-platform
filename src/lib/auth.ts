@@ -2,8 +2,8 @@ import { Lucia } from "lucia";
 import { DrizzlePostgreSQLAdapter } from "@lucia-auth/adapter-drizzle";
 import { db } from "../db";
 import { sessions, users } from "../db/schema";
-import { createServerFn } from "@tanstack/start";
-import { getCookie, setCookie } from "vinxi/http";
+import { createServerFn } from "@tanstack/react-start";
+import { getCookie, setCookie } from "@tanstack/react-start/server";
 
 const adapter = new DrizzlePostgreSQLAdapter(db, sessions, users);
 

@@ -1,0 +1,10 @@
+node_modules
+dist
+.output
+.vinxi
+.env
+.git
+.github
+.atl
+openspec
+README.md

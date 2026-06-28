@@ -1,6 +1,6 @@
 import { createFileRoute, redirect, useRouter } from '@tanstack/react-router';
 import { requireAuthRole } from '../../lib/auth';
-import { createServerFn } from '@tanstack/start';
+import { createServerFn } from '@tanstack/react-start';
 import { db } from '../../db';
 import { donations } from '../../db/schema';
 import { eq, inArray, and } from 'drizzle-orm';

@@ -5,19 +5,19 @@ A full-stack web application designed to connect tech donors with educational or
 ## Quick path
 
 1. **Install dependencies:** `pnpm install`
-2. **Setup environment:** Ensure PostgreSQL is running and update `.env` (default port 5433).
-3. **Run database migrations:** `pnpm exec drizzle-kit push` (or run migrations).
-4. **Start the development server:** `pnpm run dev`
+2. **Setup environment:** Ensure Docker is running and run `docker compose up --build -d` to launch the database and the web application.
+3. **Run database migrations:** `pnpm exec drizzle-kit push` (to ensure the schema is applied to the PostGIS instance on port 5433).
+4. **Access the application:** The app will be available at `http://localhost:4000/`.
 
 ## Details
 
-| Component | Technology | Decision & Reasoning |
-|-----------|------------|----------------------|
-| **Framework** | TanStack Start (React + SSR) | Provides bleeding-edge server-side rendering, robust file-based routing, and high performance. |
-| **Styling** | Tailwind CSS v4 + Kanagawa | Selected Vanilla Tailwind v4 with `@theme` block. Kanagawa Dragon palette ensures a premium dark aesthetic. |
-| **Database** | PostgreSQL + PostGIS (via Drizzle) | PostGIS was chosen to handle the complex geospatial radius logic for automatically assigning hardware to the nearest technician. |
-| **Auth** | Lucia Auth | Handles secure, session-based authentication for Donors, Admins, and Technicians. |
-| **Testing** | Vitest | Runs unit and integration tests (with test isolation to prevent database state collision). |
+| Topic | Decision |
+|-------|----------|
+| Framework | **TanStack Start (React + SSR):** Provides bleeding-edge server-side rendering, robust file-based routing, and high performance. |
+| Styling | **Tailwind CSS v4 + Kanagawa:** Selected Vanilla Tailwind v4 with `@theme` block. Kanagawa Dragon palette ensures a premium dark aesthetic. |
+| Database | **PostgreSQL + PostGIS (via Drizzle):** PostGIS was chosen to handle the complex geospatial radius logic for automatically assigning hardware to the nearest technician. |
+| Auth | **Lucia Auth:** Handles secure, session-based authentication for Donors, Admins, and Technicians. |
+| Testing | **Vitest:** Runs unit and integration tests with test isolation to prevent database state collision (`fileParallelism: false`). |
 
 ## Architecture & SDD
 
@@ -28,8 +28,9 @@ The platform was built using **Spec-Driven Development (SDD)**. All architectura
 
 ## Checklist
 
-- [ ] Node.js & pnpm installed locally.
-- [ ] Docker installed for running PostGIS via `docker-compose.yml`.
+- [ ] Docker installed for running PostGIS and the web server via `docker-compose.yml`.
+- [ ] Node.js (v22+) & pnpm installed locally if running in development mode.
+- [ ] `.env` file created (defaults to `postgres://postgres:password@localhost:5433/circular_economy`).
 
 ## Next step
 
