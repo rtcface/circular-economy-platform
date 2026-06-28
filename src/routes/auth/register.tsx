@@ -53,7 +53,7 @@ function Register() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!location) {
-      setError('Please select a location on the map');
+      setError('Por favor, seleccioná una ubicación en el mapa');
       return;
     }
     
@@ -67,57 +67,57 @@ function Register() {
         }
       }
     } catch (err: any) {
-      setError(err.message || 'Registration failed');
+      setError(err.message || 'Error en el registro');
     }
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
-      <h1 className="text-2xl font-bold mb-4">Register</h1>
-      {error && <div className="text-red-500 mb-4">{error}</div>}
+    <div className="max-w-md mx-auto mt-10 p-6 bg-sumi-ink/80 backdrop-blur-md rounded-xl shadow-lg border border-white/10 text-fuji-white">
+      <h1 className="text-2xl font-bold mb-4 text-spring-green">Registro</h1>
+      {error && <div className="text-red-500 mb-4 bg-red-500/10 p-3 rounded">{error}</div>}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2">Email</label>
+          <label className="block text-fuji-white mb-2">Correo Electrónico</label>
           <input 
             type="email" 
-            className="w-full border p-2 rounded" 
+            className="w-full border border-white/20 bg-sumi-ink/50 text-fuji-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-spring-green" 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
             required 
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2">Password</label>
+          <label className="block text-fuji-white mb-2">Contraseña</label>
           <input 
             type="password" 
-            className="w-full border p-2 rounded" 
+            className="w-full border border-white/20 bg-sumi-ink/50 text-fuji-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-spring-green" 
             value={password} 
             onChange={(e) => setPassword(e.target.value)} 
             required 
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2">Role</label>
+          <label className="block text-fuji-white mb-2">Rol</label>
           <select 
-            className="w-full border p-2 rounded" 
+            className="w-full border border-white/20 bg-sumi-ink text-fuji-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-spring-green" 
             value={role} 
             onChange={(e) => setRole(e.target.value as 'donor' | 'technician')}
           >
-            <option value="donor">Donor</option>
-            <option value="technician">Technician</option>
+            <option value="donor">Donante</option>
+            <option value="technician">Técnico</option>
           </select>
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2">Location</label>
+          <label className="block text-fuji-white mb-2">Ubicación (Seleccioná en el mapa)</label>
           <MapPicker onLocationSelect={(lat, lng) => setLocation([lat, lng])} />
           {location && (
-            <p className="text-sm text-green-600 mt-2">
-              Location selected: {location[0].toFixed(4)}, {location[1].toFixed(4)}
+            <p className="text-sm text-spring-green mt-2 font-mono">
+              Coordenadas: {location[0].toFixed(4)}, {location[1].toFixed(4)}
             </p>
           )}
         </div>
-        <button type="submit" className="w-full bg-green-600 text-white p-2 rounded hover:bg-green-700">
-          Register
+        <button type="submit" className="w-full bg-spring-green text-sumi-ink font-bold p-3 rounded-lg hover:bg-spring-green/90 transition-colors shadow-[0_0_10px_var(--color-spring-green)]">
+          Registrarse
         </button>
       </form>
     </div>

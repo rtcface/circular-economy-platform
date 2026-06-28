@@ -14,6 +14,7 @@ function RootComponent() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Comunidad Hardware Educativo</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
         <HeadContent />
       </head>
       <body className="bg-sumiInk-900 text-fujiWhite-100 min-h-screen font-sans selection:bg-springGreen-500/30">

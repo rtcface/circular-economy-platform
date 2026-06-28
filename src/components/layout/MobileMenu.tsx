@@ -26,8 +26,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onToggl
       {isOpen && (
         <div className="fixed inset-0 z-40 bg-sumi-ink/80 backdrop-blur-sm mt-16" onClick={onClose}>
           <nav className="flex flex-col p-6 space-y-4" onClick={e => e.stopPropagation()}>
-            <a href="/" className="text-fuji-white hover:text-spring-green text-lg font-bold">Home</a>
-            <a href="/about" className="text-fuji-white hover:text-spring-green text-lg font-bold">About</a>
+            <a href="/" className="text-fuji-white hover:text-spring-green text-lg font-bold">Inicio</a>
+            <a href="/about" className="text-fuji-white hover:text-spring-green text-lg font-bold">Sobre Nosotros</a>
           </nav>
         </div>
       )}

@@ -11,7 +11,7 @@ describe('MobileMenu', () => {
     
     const button = screen.getByRole('button', { name: /toggle menu/i });
     expect(button).toBeDefined();
-    expect(screen.queryByText('Home')).toBeNull(); // Menu is closed
+    expect(screen.queryByText('Inicio')).toBeNull(); // Menu is closed
   });
 
   it('renders open state and links', () => {
@@ -20,8 +20,8 @@ describe('MobileMenu', () => {
     
     render(<MobileMenu isOpen={true} onToggle={onToggle} onClose={onClose} />);
     
-    expect(screen.getByText('Home')).toBeDefined();
-    expect(screen.getByText('About')).toBeDefined();
+    expect(screen.getByText('Inicio')).toBeDefined();
+    expect(screen.getByText('Sobre Nosotros')).toBeDefined();
   });
 
   it('calls onToggle when button is clicked', () => {

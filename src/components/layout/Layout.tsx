@@ -19,8 +19,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
           
           <nav className="hidden md:flex space-x-8">
-            <a href="/" className="hover:text-spring-green transition-colors">Home</a>
-            <a href="/about" className="hover:text-spring-green transition-colors">About</a>
+            <a href="/" className="hover:text-spring-green transition-colors">Inicio</a>
+            <a href="/about" className="hover:text-spring-green transition-colors">Sobre Nosotros</a>
           </nav>
 
           <MobileMenu 
@@ -36,7 +36,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
 
       <footer className="border-t border-white/10 py-6 text-center text-sm text-fuji-white/60">
-        © {new Date().getFullYear()} Circular Economy Platform
+        © {new Date().getFullYear()} Plataforma de Economía Circular
       </footer>
     </div>
   );
